@@ -1,0 +1,33 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HourseLB3.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Entry x:Name="eAddr" Placeholder="Адрес дома" />
+
+            <Label Text="Дата осмотра:" />
+            <DatePicker x:Name="pDate" />
+
+            <Label Text="Время осмотра:" />
+            <TimePicker x:Name="pTime" />
+
+            <Label Text="Материал:" />
+            <Picker x:Name="pMat" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Наличие лифта:" VerticalOptions="Center" />
+                <Switch x:Name="sLift" />
+            </HorizontalStackLayout>
+
+            <Button Text="Выбрать фото" Clicked="OnImg" BackgroundColor="Gray" />
+            <Image x:Name="imgV" HeightRequest="200" Aspect="AspectFill" />
+
+            <Button Text="Сохранить" Clicked="OnSave" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Экспорт в HTML (Отчет)" 
+        Clicked="OnExportSingleClicked" 
+        BackgroundColor="#3498db" 
+        TextColor="White" 
+        Margin="0,10,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
